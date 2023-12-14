@@ -1,0 +1,22 @@
+{
+  "name": "web-testing",
+  "version": "1.0.0",
+  "author": "Mikhail Hulevich",
+  "description": "This JS boilerplate created by Mikhail Hulevich.Allows to run WebdriverIO WEB tests",
+  "type": "module",
+  "devDependencies": {
+    "@wdio/cli": "^8.16.4",
+    "@wdio/allure-reporter": "8.11.0",
+    "@wdio/mocha-framework": "8.16.3",
+    "@wdio/globals": "8.16.4",
+    "@wdio/local-runner": "8.16.4",
+    "allure-commandline": "2.24.0",
+    "chai": "4.3.8",
+    "wdio-chromedriver-service": "8.1.1",
+    "webdriverio": "8.16.4"
+  },
+  "scripts": {
+    "test": "wdio run config/wdio.conf.js",
+    "test:report": "allure generate allure-results --clean --output reports/allure-report && allure open reports/allure-report"
+  }
+}
